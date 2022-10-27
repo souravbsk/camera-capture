@@ -86,8 +86,8 @@ function clearPhoto() {
   
 //   context.fillStyle = "none";
 //   context.fillRect(0, 0, canvas.width, canvas.height);
-//   var data = canvas.toDataURL();
-//   photo.setAttribute('src', data);
+  var data = canvas.toDataURL();
+  photo.setAttribute('src', data);
 }
 
 document.getElementById('switchFrontBtn').onclick = (event) => {
