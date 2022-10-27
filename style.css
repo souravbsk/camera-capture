@@ -1,0 +1,44 @@
+.panel {
+    padding-bottom: 10px;
+  }
+  
+  #cam {
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+  }
+  
+  #photo {
+    border: 1px;
+    border-color: black;
+    border-style: dashed;
+  }
+
+#screan-shot{
+   background-image:url(./frame-g1d4078bbb_1280.png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 46vh;
+   width: 100%;
+   overflow: hidden;
+   
+}
+#screan-shot img{
+    width:100%;
+    text-align: center;
+    position: relative;
+    z-index: -5;
+    top: 25px;
+
+    
+}
+.card{
+    /* margin: 1rem; */
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 2rem;
+
+}

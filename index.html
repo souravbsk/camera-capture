@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+    <!-- 
+    <div class="panel">
+        <button id="switchFrontBtn">Front Camera</button>
+        <button id="switchBackBtn">Back Camera</button>
+        <button id="snapBtn">Snap</button>
+    </div> -->
+
+
+    <div class="card-container">
+        <div class="card">
+            <div class="panel">
+                <button id="switchFrontBtn">Front Camera</button>
+                <button id="switchBackBtn">Back Camera</button>
+                <button id="snapBtn">Snap</button>
+            </div>
+        </div>
+        <div class="card">
+            <video width="100%" id="cam" autoplay muted playsinline>Not available</video>
+        </div>
+        <div class="card">
+            <div id="screan-shot">
+                <canvas id="canvas" style="display:none"></canvas>
+                <img width="100%" src="./photo.jpg" id="photo" alt="The screen capture will appear in this box.">
+            </div>
+        </div>
+        <div class="card">
+            <button id="button">Download Image</button>
+        </div>
+
+    </div>
+    <!-- <div style="width:100%"> -->
+        <!-- add autoplay muted playsinline for iOS -->
+
+        <!-- <div id="screan-shot">
+            <canvas id="canvas" style="display:none"></canvas>
+
+            <img width="100%" src="./photo.jpg" id="photo" alt="The screen capture will appear in this box.">
+        </div> -->
+    <!-- </div> -->
+
+    <!-- jquery min js cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- dom to img -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <!-- download img cdn -->
+    <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+    <script src="app.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function () {
+                domtoimage.toBlob(document.getElementById('screan-shot')).then(function (blob) {
+                    window.saveAs(blob, "output.png");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
