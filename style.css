@@ -19,7 +19,7 @@
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
-   height: 46vh;
+   height: 36vh;
    width: 100%;
    overflow: hidden;
    
@@ -29,7 +29,8 @@
     text-align: center;
     position: relative;
     z-index: -5;
-    top: 25px;
+    top: 30px;
+    height: 170px;
 
     
 }

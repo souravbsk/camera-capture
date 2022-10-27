@@ -16,8 +16,8 @@ var mediaStream = null;
 var constraints = { 
   audio: false, 
   video: { 
-    width: {ideal: 640}, 
-    height: {ideal: 480},
+    width: {ideal: '100%'}, 
+    height: {ideal: '100vh'},
     facingMode: "environment"
   } 
 }; 
